@@ -1,0 +1,100 @@
+{
+    "proyects": [{
+            "id": 1,
+            "title": "Genshin",
+            "description": "lorem impsum 1",
+            "idown": 1,
+            "linktogithub": " ",
+            "evidence": "https://images.ctfassets.net/lzny33ho1g45/learn-html-css-p-img/12978ef50623cf76538cfe18e1011fc5/file.png?w=1520&fm=jpg&q=30&fit=thumb&h=760\""
+        },
+        {
+            "id": 2,
+            "title": "Pokemon Go",
+            "description": "\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis neque elit. Sed condimentum interdum rutrum. Praesent accumsan, eros quis ultrices facilisis, urna mauris blandit tortor, vitae dapibus nisi purus non massa. Nam mattis enim ut dignissim fermentum. Nulla orci diam, condimentum non justo in, aliquet venenatis nisl. Nullam augue enim, feugiat eu nisi eget, ullamcorper tristique quam. In hac habitasse platea dictumst. Sed laoreet tristique justo in tempus. Ut quis mattis nisl. Proin pharetra purus sem, ac tristique velit condimentum quis. Aenean ac lectus dolor. Proin venenatis sem in magna luctus ullamcorper. Mauris placerat ullamcorper ex. Curabitur at metus eros. Aliquam quis tempor elit. Vestibulum euismod odio eget neque bibendum, at congue arcu scelerisque. Nam tincidunt mi a felis fringilla, at scelerisque eros facilisis.",
+            "idown": 1,
+            "linktogithub": " ",
+            "evidence": "https://images.ctfassets.net/lzny33ho1g45/learn-html-css-p-img/12978ef50623cf76538cfe18e1011fc5/file.png?w=1520&fm=jpg&q=30&fit=thumb&h=760\""
+        },
+        {
+            "id": 3,
+            "title": "Clash of Clans",
+            "description": "Ya no lo juego",
+            "idown": 1,
+            "linktogithub": " ",
+            "evidence": "https://images.ctfassets.net/lzny33ho1g45/learn-html-css-p-img/12978ef50623cf76538cfe18e1011fc5/file.png?w=1520&fm=jpg&q=30&fit=thumb&h=760\""
+        },
+        {
+            "id": 4,
+            "title": "Battlefield 4",
+            "description": "Mejor que Call of duty",
+            "idown": 1,
+            "linktogithub": " ",
+            "evidence": "https://images.ctfassets.net/lzny33ho1g45/learn-html-css-p-img/12978ef50623cf76538cfe18e1011fc5/file.png?w=1520&fm=jpg&q=30&fit=thumb&h=760\""
+        },
+        {
+            "id": 5,
+            "title": "AOS",
+            "description": "Sff",
+            "idown": 2,
+            "linktogithub": " ",
+            "evidence": "https://images.ctfassets.net/lzny33ho1g45/learn-html-css-p-img/12978ef50623cf76538cfe18e1011fc5/file.png?w=1520&fm=jpg&q=30&fit=thumb&h=760\""
+        }
+    ],
+    "profile": [{
+            "idprofile": 1,
+            "myname": "Alejandro",
+            "lastname": "Pizarro",
+            "email": "sergiogg1259@gmail.com",
+            "password": "123456789",
+            "myespeciality": "Desarrollo web",
+            "myexperience": "Junior",
+            "myinfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ultrices, turpis at facilisis bibendum, nulla urna vestibulum massa, sed blandit dolor orci eu ex. Aenean quam arcu, efficitur a vestibulum eget, ultrices in velit. Ut vitae urna porta, auctor sapien eget, lobortis ipsum. Curabitur in eros mattis, dignissim urna eu, hendrerit neque. Pellentesque ultrices auctor mi nec facilisis. Maecenas vel dictum ante. Aenean in massa fermentum, venenatis elit ut, commodo lacus. Morbi efficitur laoreet mauris. Suspendisse potenti.",
+            "namegithub": "sergiomg1259"
+        },
+        {
+            "idprofile": 2,
+            "myname": "Edson",
+            "lastname": "Vasques",
+            "email": "sergiogg12592@gmail.com",
+            "password": "1234567892",
+            "myespeciality": "Desarrollo web",
+            "myexperience": "Junior",
+            "myinfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ultrices, turpis at facilisis bibendum, nulla urna vestibulum massa, sed blandit dolor orci eu ex. Aenean quam arcu, efficitur a vestibulum eget, ultrices in velit. Ut vitae urna porta, auctor sapien eget, lobortis ipsum. Curabitur in eros mattis, dignissim urna eu, hendrerit neque. Pellentesque ultrices auctor mi nec facilisis. Maecenas vel dictum ante. Aenean in massa fermentum, venenatis elit ut, commodo lacus. Morbi efficitur laoreet mauris. Suspendisse potenti.",
+            "namegithub": "symphony701"
+        }
+    ],
+    "announcement": [{
+            "idAnnouncement": 1,
+            "titleAnnouncement": "Se necesita...",
+            "company": "Coca cola",
+            "especialty": "Programador web",
+            "experience": "Practicante",
+            "infoJob": "lorem ipsum ",
+            "date:": "17-09-2021",
+            "salary": 200,
+            "applicants": [1, 2, 3]
+        },
+        {
+            "idAnnouncement": 2,
+            "titleAnnouncement": "Se necesita...",
+            "company": "Coca cola",
+            "especialty": "Ux design",
+            "experience": "Practicante",
+            "infoJob": "lorem ipsum ",
+            "date:": "18-09-2021",
+            "salary": 200,
+            "applicants": [2, 3]
+        },
+        {
+            "idAnnouncement": 3,
+            "titleAnnouncement": "Se necesita...",
+            "company": "Coca cola",
+            "especialty": "Programador mobile",
+            "experience": "Practicante",
+            "infoJob": "lorem ipsum ",
+            "date:": "18-09-2021",
+            "salary": 200,
+            "applicants": [3]
+        }
+    ]
+}
