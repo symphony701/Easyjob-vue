@@ -30,6 +30,7 @@
       <v-row>
         <v-col>
           <h2>Proyectos</h2>
+          
         </v-col>
       </v-row>
       <v-row>
@@ -55,7 +56,15 @@
                 v-model="editableDescription"
               ></v-textarea>
 
-              <v-select :items="items" label="Standard"></v-select>
+              <v-select
+                :items="repositories"
+                single-line
+                return-object
+                item-text="name"
+                item-value="link"
+                label="Repositorio de Github"
+                v-model="editableRepository"
+              ></v-select>
 
               <v-btn @click="dialog_add = false">Salir</v-btn>
               <v-btn @click="addProyect(), (dialog_add = false)">Crear</v-btn>
@@ -109,6 +118,10 @@
                     <p class="text-dialog">
                       {{ this.selectedProyect.description }}
                     </p>
+                    <v-btn v-bind:href="this.selectedProyect.linktogithub" color="purple darken-1" text>
+                      <v-icon>mdi-launch</v-icon> Github
+                    </v-btn>
+                    
                   </v-col>
                 </v-row>
                 <v-row>
@@ -130,6 +143,15 @@
                           label="Descripcion del proyecto"
                           v-model="editableDescription"
                         ></v-textarea>
+                        <v-select
+                          :items="repositories"
+                          single-line
+                          return-object
+                          item-text="name"
+                          item-value="link"
+                          label="Repositorio de Github"
+                          v-model="editableRepository"
+                        ></v-select>
                         <v-btn @click="dialog_inside = false">Salir</v-btn>
                         <v-btn @click="sendEditProyect">Editar</v-btn>
                       </v-container>
@@ -167,6 +189,7 @@ export default {
       editableProyect: {},
       editableTitle: "",
       editableDescription: "",
+      editableRepository: "",
       repositories: [],
     };
   },
@@ -178,11 +201,13 @@ export default {
     let rawRepositorys = await LinkService.getRepositories(
       this.profile.namegithub
     );
-    for(let i=0;i<rawRepositorys.length;i++){
-        
+    for (let i = 0; i < rawRepositorys.length; i++) {
+      this.repositories.push({
+        name: rawRepositorys[i].name.toString(),
+        link: rawRepositorys[i].html_url.toString(),
+      });
     }
-    console.log(this.repositories);
-
+    
   },
   methods: {
     cardSelect(p_id) {
@@ -222,16 +247,16 @@ export default {
       );
     },
     addProyect() {
-      this.editableTitle = "";
-      this.editableDescription = "";
       LinkService.addProyect(
         this.editableTitle,
         this.editableDescription,
-        this.$route.params.id
+        this.$route.params.id,
+        this.editableRepository.link
       );
       this.refreshData();
       this.editableTitle = "";
       this.editableDescription = "";
+      this.editableRepository = "";
       this.dialog_add = false;
     },
     deleteProyect() {

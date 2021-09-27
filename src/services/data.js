@@ -32,7 +32,7 @@ class LinkService {
             console.log(error)
         }
     }
-    async addProyect(titulo, description, idown) {
+    async addProyect(titulo, description, idown, repository = "") {
 
         try {
             const request = await axios.get(`${this.local}/proyects?_sort=id&_order=desc`)
@@ -44,7 +44,7 @@ class LinkService {
                 "title": titulo,
                 "description": description,
                 "idown": idown,
-                "linktogithub": " ",
+                "linktogithub": repository,
                 "evidence": "https://images.ctfassets.net/lzny33ho1g45/learn-html-css-p-img/12978ef50623cf76538cfe18e1011fc5/file.png?w=1520&fm=jpg&q=30&fit=thumb&h=760",
                 "img": "https://cdn.vuetifyjs.com/images/cards/cooking.png"
 

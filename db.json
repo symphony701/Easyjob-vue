@@ -43,6 +43,42 @@
             "linktogithub": " ",
             "evidence": "https://images.ctfassets.net/lzny33ho1g45/learn-html-css-p-img/12978ef50623cf76538cfe18e1011fc5/file.png?w=1520&fm=jpg&q=30&fit=thumb&h=760",
             "img": "https://cdn.vuetifyjs.com/images/cards/cooking.png"
+        },
+        {
+            "id": 8,
+            "title": "ssdfsdf",
+            "description": "sdfsdfsdf",
+            "idown": "1",
+            "linktogithub": "",
+            "evidence": "https://images.ctfassets.net/lzny33ho1g45/learn-html-css-p-img/12978ef50623cf76538cfe18e1011fc5/file.png?w=1520&fm=jpg&q=30&fit=thumb&h=760",
+            "img": "https://cdn.vuetifyjs.com/images/cards/cooking.png"
+        },
+        {
+            "id": 9,
+            "title": "sdfsdf",
+            "description": "sdfsdfsdfsdfsdf",
+            "idown": "1",
+            "linktogithub": "https://github.com/SergioMG1259/aplicacionesweb",
+            "evidence": "https://images.ctfassets.net/lzny33ho1g45/learn-html-css-p-img/12978ef50623cf76538cfe18e1011fc5/file.png?w=1520&fm=jpg&q=30&fit=thumb&h=760",
+            "img": "https://cdn.vuetifyjs.com/images/cards/cooking.png"
+        },
+        {
+            "id": 10,
+            "title": "sdfsdf",
+            "description": "sdfsdfssssssssss",
+            "idown": "1",
+            "linktogithub": "https://github.com/SergioMG1259/AppWeb",
+            "evidence": "https://images.ctfassets.net/lzny33ho1g45/learn-html-css-p-img/12978ef50623cf76538cfe18e1011fc5/file.png?w=1520&fm=jpg&q=30&fit=thumb&h=760",
+            "img": "https://cdn.vuetifyjs.com/images/cards/cooking.png"
+        },
+        {
+            "id": 11,
+            "title": "asdasd",
+            "description": "sssssssssssss",
+            "idown": "2",
+            "linktogithub": "https://github.com/symphony701/EasyJobs",
+            "evidence": "https://images.ctfassets.net/lzny33ho1g45/learn-html-css-p-img/12978ef50623cf76538cfe18e1011fc5/file.png?w=1520&fm=jpg&q=30&fit=thumb&h=760",
+            "img": "https://cdn.vuetifyjs.com/images/cards/cooking.png"
         }
     ],
     "profile": [{
@@ -72,7 +108,7 @@
             "idAnnouncement": 1,
             "idCompany": 1,
             "titleAnnouncement": "Se necesita...",
-            "company": "Coca cola",
+            "companyName": "Coca cola",
             "especialty": "Programador web",
             "experience": "Practicante",
             "infoJob": "lorem ipsum ",
@@ -88,7 +124,7 @@
             "idAnnouncement": 2,
             "idCompany": 2,
             "titleAnnouncement": "Se necesita...",
-            "company": "Coca cola",
+            "companyName": "Coca cola",
             "especialty": "Ux design",
             "experience": "Practicante",
             "infoJob": "lorem ipsum ",
@@ -103,7 +139,7 @@
             "idAnnouncement": 3,
             "idCompany": 1,
             "titleAnnouncement": "Se necesita...",
-            "company": "Coca cola",
+            "companyName": "Coca cola",
             "especialty": "Programador mobile",
             "experience": "Practicante",
             "infoJob": "lorem ipsum ",
