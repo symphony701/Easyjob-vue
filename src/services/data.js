@@ -32,6 +32,15 @@ class LinkService {
             console.log(error)
         }
     }
+    async setprofile(id, data) {
+
+        try {
+            await axios.patch(`${this.local}/profile/${id}`, data, { headers: this.headers })
+
+        } catch (error) {
+            console.log(error)
+        }
+    }
     async addProyect(titulo, description, idown, repository = "") {
 
         try {

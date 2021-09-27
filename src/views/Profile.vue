@@ -4,7 +4,48 @@
       <v-row>
         <v-col class="d-flex">
           <h2>{{ this.profile.myname }} {{ this.profile.lastname }}</h2>
-          <v-icon>mdi-pencil</v-icon>
+          <v-icon @click="dialog_edit_profile=true">mdi-pencil</v-icon>
+          <v-dialog
+              min-width="900"
+              min-height="900"
+              class="dialog-inside"
+              v-model="dialog_edit_profile"
+              persistent
+              max-width="900"
+          >
+            <v-container class="cont-edit">
+              <v-row>
+                <v-col>
+                  <v-text-field
+                      label="Nombre"
+                      v-model="editNameProfile"
+                  ></v-text-field>
+                </v-col>
+                <v-col>
+                  <v-text-field
+                      label="Apellido"
+                      v-model="editLastNameProfile"
+                  ></v-text-field>
+                </v-col>
+
+              </v-row>
+              <v-textarea
+                  label="Descripcion del proyecto"
+                  v-model="editInfoProfile"
+              ></v-textarea>
+              <v-select
+                  :items="repositories"
+                  single-line
+                  return-object
+                  item-text="name"
+                  item-value="link"
+                  label="Repositorio de Github"
+                  v-model="editableRepository"
+              ></v-select>
+              <v-btn @click="dialog_edit_profile = false">Salir</v-btn>
+              <v-btn @click="sendEditProfile">Editar</v-btn>
+            </v-container>
+          </v-dialog>
         </v-col>
       </v-row>
       <v-row>
@@ -191,12 +232,17 @@ export default {
       editableDescription: "",
       editableRepository: "",
       repositories: [],
+      dialog_edit_profile:false,
+      editNameProfile:"",
+      editLastNameProfile:"",
+      editInfoProfile:""
     };
   },
 
   mounted: async function () {
     let resultado = await LinkService.getProfileById(this.$route.params.id);
     this.profile = resultado[0];
+    console.log(this.profile)
     this.proyects = await LinkService.getProyectByOwner(this.$route.params.id);
     let rawRepositorys = await LinkService.getRepositories(
       this.profile.namegithub
@@ -207,7 +253,9 @@ export default {
         link: rawRepositorys[i].html_url.toString(),
       });
     }
-    
+    this.editNameProfile=this.profile.myname
+    this.editLastNameProfile=this.profile.lastname
+    this.editInfoProfile=this.profile.myinfo
   },
   methods: {
     cardSelect(p_id) {
@@ -227,6 +275,17 @@ export default {
       this.dialog_inside = true;
       this.editableProyect = this.selectedProyect;
     },
+    sendEditProfile() {
+      const submitEdition = {
+        myname: this.editNameProfile,
+       lastname: this.editLastNameProfile,
+        myinfo: this.editInfoProfile
+      };
+      console.log(submitEdition);
+      LinkService.setprofile(this.profile.id, submitEdition);
+      this.refreshData();
+      this.dialog_edit_profile = false;
+    },
     sendEditProyect() {
       const submitEdition = {
         title: this.editableTitle,
@@ -239,6 +298,7 @@ export default {
       this.dialog_inside = false;
       this.dialog = false;
     },
+
     async refreshData() {
       let resultado = await LinkService.getProfileById(this.$route.params.id);
       this.profile = resultado[0];
