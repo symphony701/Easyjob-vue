@@ -73,10 +73,11 @@ class LinkService {
         return respuesta
 
     }
-
-
-
-
+    async getannouncementPractition(){
+        const request= await axios.get(`${this.local}/announcement?experience=Practicante`)
+        const respuesta= await request.data
+        return respuesta
+    }
 }
 
 export default new LinkService();

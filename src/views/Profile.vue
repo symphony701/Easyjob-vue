@@ -302,7 +302,10 @@ export default {
 
     async refreshData() {
       let resultado = await LinkService.getProfileById(this.$route.params.id);
+      console.log("////")
+      console.log(this.profile)
       this.profile = resultado;
+      console.log(this.profile)
       this.proyects = await LinkService.getProyectByOwner(
         this.$route.params.id
       );
