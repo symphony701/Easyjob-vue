@@ -73,10 +73,31 @@ class LinkService {
         return respuesta
 
     }
-    async getannouncementPractition(){
-        const request= await axios.get(`${this.local}/announcement?experience=Practicante`)
-        const respuesta= await request.data
+    async getannouncementPractition() {
+        const request = await axios.get(`${this.local}/announcement?experience=Practicante`)
+        const respuesta = await request.data
         return respuesta
+    }
+    async addPostulant(postulants, id) {
+        try {
+            await axios.patch(`${this.local}/announcement/${id}`, postulants, { headers: this.headers })
+
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    async validateUser(data) {
+        console.log(data)
+        try {
+            //const request = await axios.get(`${this.local}/profile?email=${data.email}&password=${data.password}`);
+            const request = await axios.get(`${this.local}/profile?email=${data.user}&password=${data.password}`)
+            const respuesta = await request.data
+
+            return respuesta[0].id
+
+        } catch (error) {
+            console.log(error)
+        }
     }
 }
 

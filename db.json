@@ -80,6 +80,15 @@
       "linktogithub": "https://github.com/symphony701/EasyJobs",
       "evidence": "https://images.ctfassets.net/lzny33ho1g45/learn-html-css-p-img/12978ef50623cf76538cfe18e1011fc5/file.png?w=1520&fm=jpg&q=30&fit=thumb&h=760",
       "img": "https://cdn.vuetifyjs.com/images/cards/cooking.png"
+    },
+    {
+      "id": 12,
+      "title": "First Proyect",
+      "description": "UwU otro proyecto",
+      "idown": "3",
+      "linktogithub": "https://github.com/symphony701/rep_sym",
+      "evidence": "https://images.ctfassets.net/lzny33ho1g45/learn-html-css-p-img/12978ef50623cf76538cfe18e1011fc5/file.png?w=1520&fm=jpg&q=30&fit=thumb&h=760",
+      "img": "https://cdn.vuetifyjs.com/images/cards/cooking.png"
     }
   ],
   "profile": [
@@ -104,6 +113,17 @@
       "myexperience": "Senior",
       "myinfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ultrices, turpis at facilisis bibendum, nulla urna vestibulum massa, sed blandit dolor orci eu ex. Aenean quam arcu, efficitur a vestibulum eget, ultrices in velit. Ut vitae urna porta, auctor sapien eget, lobortis ipsum. Curabitur in eros mattis, dignissim urna eu, hendrerit neque. Pellentesque ultrices auctor mi nec facilisis. Maecenas vel dictum ante. Aenean in massa fermentum, venenatis elit ut, commodo lacus. Morbi efficitur laoreet mauris. Suspendisse potenti.",
       "namegithub": "symphony701"
+    },
+    {
+      "id": 3,
+      "myname": "Symphony",
+      "lastname": "Roque",
+      "email": "rnsebastian701@gmail.com",
+      "password": "123123",
+      "myespeciality": "Desarrollo web",
+      "myexperience": "Junior",
+      "myinfo": "Soy el programador principal de esta madre :v",
+      "namegithub": "symphony701"
     }
   ],
   "announcement": [
@@ -119,9 +139,12 @@
       "salary": 200,
       "salarytype": "soles",
       "applicants": [
+        3,
+        4,
         1,
-        2,
-        3
+        1,
+        1,
+        1
       ]
     },
     {
@@ -136,8 +159,7 @@
       "salary": 200,
       "salarytype": "dolares",
       "applicants": [
-        2,
-        3
+        1
       ]
     },
     {
@@ -152,7 +174,7 @@
       "salary": 200,
       "salarytype": "soles",
       "applicants": [
-        3
+        1
       ]
     }
   ]

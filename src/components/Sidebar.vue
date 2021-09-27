@@ -39,16 +39,18 @@
       </v-list>
       <template v-slot:append>
         <div class="pa-2">
-          <v-btn color="#F80356" class="button-logout" large block rounded>
+          <v-btn @click="asdf" color="#F80356" class="button-logout" large block rounded>
             SALIR
           </v-btn>
         </div>
       </template>
+      
     </v-navigation-drawer>
   </div>
 </template>
 
 <script>
+import store from '../store/index'
 export default {
   name: "Sidebar",
   watch: {
@@ -66,11 +68,17 @@ export default {
         { title: "Perfil", href: "/profile" },
         { title: "Notificaciones", href: "/about" },
         { title: "Mensajes" , href: "/currentproyect"},
-        { title: "Para Practicantes", href: "/practitioner" },
+        { title: "Para Practicantes", href: `/practitioner/${parseInt(this.$route.params.id)}` },
         { title: "Premium" },
       ],
     };
   },
+  methods:{
+    asdf(){
+      console.log(store.getId)
+    }
+  }
+  
 };
 </script>
 
