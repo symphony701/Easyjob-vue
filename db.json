@@ -108,7 +108,7 @@
   ],
   "announcement": [
     {
-      "idAnnouncement": 1,
+      "id": 1,
       "idCompany": 1,
       "titleAnnouncement": "Se necesita...",
       "companyName": "Coca cola",
@@ -117,6 +117,7 @@
       "infoJob": "lorem ipsum ",
       "date:": "17-09-2021",
       "salary": 200,
+      "salarytype": "soles",
       "applicants": [
         1,
         2,
@@ -124,7 +125,7 @@
       ]
     },
     {
-      "idAnnouncement": 2,
+      "id": 2,
       "idCompany": 2,
       "titleAnnouncement": "Se necesita...",
       "companyName": "Coca cola",
@@ -133,13 +134,14 @@
       "infoJob": "lorem ipsum ",
       "date:": "18-09-2021",
       "salary": 200,
+      "salarytype": "dolares",
       "applicants": [
         2,
         3
       ]
     },
     {
-      "idAnnouncement": 3,
+      "id": 3,
       "idCompany": 1,
       "titleAnnouncement": "Se necesita...",
       "companyName": "Coca cola",
@@ -148,6 +150,7 @@
       "infoJob": "lorem ipsum ",
       "date:": "18-09-2021",
       "salary": 200,
+      "salarytype": "soles",
       "applicants": [
         3
       ]
