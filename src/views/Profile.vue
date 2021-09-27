@@ -43,7 +43,7 @@
                   v-model="editableRepository"
               ></v-select>
               <v-btn @click="dialog_edit_profile = false">Salir</v-btn>
-              <v-btn @click="sendEditProfile">Editar</v-btn>
+              <v-btn @click="sendEditProfile()">Editar</v-btn>
             </v-container>
           </v-dialog>
         </v-col>
@@ -241,7 +241,8 @@ export default {
 
   mounted: async function () {
     let resultado = await LinkService.getProfileById(this.$route.params.id);
-    this.profile = resultado[0];
+    console.log(resultado)
+    this.profile = resultado;
     console.log(this.profile)
     this.proyects = await LinkService.getProyectByOwner(this.$route.params.id);
     let rawRepositorys = await LinkService.getRepositories(
@@ -301,7 +302,7 @@ export default {
 
     async refreshData() {
       let resultado = await LinkService.getProfileById(this.$route.params.id);
-      this.profile = resultado[0];
+      this.profile = resultado;
       this.proyects = await LinkService.getProyectByOwner(
         this.$route.params.id
       );

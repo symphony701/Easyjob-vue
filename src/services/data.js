@@ -13,7 +13,7 @@ class LinkService {
 
     }
     async getProfileById(id) {
-        const request = await axios.get(`${this.local}/profile?idprofile=${id}`)
+        const request = await axios.get(`${this.local}/profile/${id}`)
         const respuesta = await request.data
         return respuesta
 
