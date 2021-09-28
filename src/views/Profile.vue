@@ -241,6 +241,23 @@ export default {
   },
 
   mounted: async function () {
+   let resultado = await LinkService.getProfileById(this.$route.params.id);
+
+    this.profile = resultado;
+
+    this.proyects = await LinkService.getProyectByOwner(this.$route.params.id);
+    let rawRepositorys = await LinkService.getRepositories(
+      this.profile.namegithub
+    );
+    for (let i = 0; i < rawRepositorys.length; i++) {
+      this.repositories.push({
+        name: rawRepositorys[i].name.toString(),
+        link: rawRepositorys[i].html_url.toString(),
+      });
+    }
+    this.editNameProfile = this.profile.myname;
+    this.editLastNameProfile = this.profile.lastname;
+    this.editInfoProfile = this.profile.myinfo;
    
   },
   methods: {
