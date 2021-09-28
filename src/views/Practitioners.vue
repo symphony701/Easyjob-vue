@@ -51,7 +51,58 @@
 <script>
 import LinkService from "../services/data";
 
+export default {
+  name: "Practitioner",
+  components: {},
+  data() {
+    return {
+      announcementPr: [],
+      /*nameCompanyPr:"",
+      titleannounce:"",
+      especialityannounce:"",
+      experienceannounce:"",
+      infoannounce:""*/
+      announceselect: {},
+      dialogannounce: false,
+    };
+  },
+  methods: {
+    AnnounceSelect(p_id) {
+      this.dialog = true;
+      let index = 0;
 
+      for (var i = 0; i < this.announcementPr.length; i++) {
+        if (p_id == this.announcementPr[i].id) {
+          index = i;
+        }
+      }
+      this.announceselect = this.announcementPr[index];
+    },
+    async postulated() {
+      const arrayPostulant = Array.from(this.announceselect.applicants);
+      console.log(arrayPostulant);
+
+      arrayPostulant.push(parseInt(this.$route.params.id));
+
+      let applicantsArray = {
+        applicants: arrayPostulant,
+      };
+
+      await LinkService.addPostulant(applicantsArray, this.announceselect.id);
+      let resultado = await LinkService.getannouncementPractition();
+      this.announcementPr = resultado;
+      console.log(this.announceselect.applicants)
+    },
+    prepostulated(p_id) {
+      this.AnnounceSelect(p_id);
+      this.postulated();
+    },
+  },
+  mounted: async function () {
+    let resultado = await LinkService.getannouncementPractition();
+    this.announcementPr = resultado;
+  },
+};
 </script>
 <style>
 .asd {
