@@ -77,17 +77,23 @@ export default {
   },
 
   created() {
-    let linkxd = `/practitioner/${this.$store.getters.getId}`;
+    let linkPractitioner = `/main/practitioner/${this.$store.getters.getId}`;
+    let linkProfile = `/main/profile/${this.$store.getters.getId}`;
     let items2 = [
       { title: "Inicio", href: "/home" },
-      { title: "Perfil", href: "/profile" },
-      { title: "Notificaciones", href: "/about" },
+      { title: "Perfil", href: linkProfile },
+      { title: "Notificaciones", href: "/main/about" },
       { title: "Mensajes", href: "/currentproyect" },
-      { title: "Para Practicantes", href: linkxd },
+      { title: "Para Practicantes", href: linkPractitioner },
       { title: "Premium" },
     ];
     this.items= items2;
     //this.testvar=linkxd
+  },
+  watch:{
+    raw:function(){
+      console.log("raaawr",raw)
+    }
   },
   methods: {
     asdf() {

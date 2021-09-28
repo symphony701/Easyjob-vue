@@ -57,7 +57,7 @@ export default {
       let idUser = await LinkService.validateUser(personaTyped);
       console.log(idUser)
       this.$store.commit('chargeUser',idUser);
-      this.$router.push({ name: 'Profile', params: { id: `${idUser}` } })
+      this.$router.push({ path: `main/profile/${idUser}`, params: { id: `${idUser}` } })
     },
   },
 };

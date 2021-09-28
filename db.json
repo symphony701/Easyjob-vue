@@ -98,6 +98,15 @@
       "linktogithub": "https://github.com/symphony701/AdLyFact",
       "evidence": "https://images.ctfassets.net/lzny33ho1g45/learn-html-css-p-img/12978ef50623cf76538cfe18e1011fc5/file.png?w=1520&fm=jpg&q=30&fit=thumb&h=760",
       "img": "https://cdn.vuetifyjs.com/images/cards/cooking.png"
+    },
+    {
+      "id": 14,
+      "title": "firebase",
+      "description": "asdasdfsdfa",
+      "idown": "3",
+      "linktogithub": "https://github.com/symphony701/Easyjob-vue",
+      "evidence": "https://images.ctfassets.net/lzny33ho1g45/learn-html-css-p-img/12978ef50623cf76538cfe18e1011fc5/file.png?w=1520&fm=jpg&q=30&fit=thumb&h=760",
+      "img": "https://cdn.vuetifyjs.com/images/cards/cooking.png"
     }
   ],
   "profile": [
@@ -153,7 +162,8 @@
         1,
         1,
         1,
-        1
+        1,
+        3
       ]
     },
     {
@@ -168,7 +178,8 @@
       "salary": 200,
       "salarytype": "dolares",
       "applicants": [
-        1
+        1,
+        3
       ]
     },
     {
@@ -183,7 +194,8 @@
       "salary": 200,
       "salarytype": "soles",
       "applicants": [
-        1
+        1,
+        3
       ]
     }
   ]
