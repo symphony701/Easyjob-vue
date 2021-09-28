@@ -10,9 +10,7 @@ export default new Vuex.Store({
     },
     mutations: {
         chargeUser: function(state, payload) {
-            console.log("El payload es:", payload);
             state.userId = payload;
-            console.log(state.userId)
         }
     },
     actions: {
