@@ -5,13 +5,24 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        userId: 1
+        userId: 0,
+
     },
-    mutations: {},
-    actions: {},
+    mutations: {
+        chargeUser: function(state, payload) {
+            console.log("El payload es:", payload);
+            state.userId = payload;
+            console.log(state.userId)
+        }
+    },
+    actions: {
+        chargeUserAction: function(context) {
+            //context.commit
+        }
+    },
     modules: {},
     getters: {
-        getId(state) {
+        getId: function(state) {
             return state.userId;
         }
     }

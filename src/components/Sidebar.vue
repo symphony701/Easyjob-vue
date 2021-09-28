@@ -39,18 +39,23 @@
       </v-list>
       <template v-slot:append>
         <div class="pa-2">
-          <v-btn @click="asdf" color="#F80356" class="button-logout" large block rounded>
+          <v-btn
+            @click="asdf"
+            color="#F80356"
+            class="button-logout"
+            large
+            block
+            rounded
+          >
             SALIR
           </v-btn>
         </div>
       </template>
-      
     </v-navigation-drawer>
   </div>
 </template>
 
 <script>
-import store from '../store/index'
 export default {
   name: "Sidebar",
   watch: {
@@ -63,22 +68,42 @@ export default {
     return {
       drawer: false,
       group: null,
+      testvar: this.ruteOfUser,
+      raw: this.$store.getters.getId,
       items: [
-        { title: "Inicio", href: "/home" },
-        { title: "Perfil", href: "/profile" },
-        { title: "Notificaciones", href: "/about" },
-        { title: "Mensajes" , href: "/currentproyect"},
-        { title: "Para Practicantes", href: `/practitioner/${parseInt(this.$route.params.id)}` },
-        { title: "Premium" },
+        
       ],
     };
   },
-  methods:{
-    asdf(){
-      console.log(store.getId)
+
+  created() {
+    let linkxd = `/practitioner/${this.$store.getters.getId}`;
+    let items2 = [
+      { title: "Inicio", href: "/home" },
+      { title: "Perfil", href: "/profile" },
+      { title: "Notificaciones", href: "/about" },
+      { title: "Mensajes", href: "/currentproyect" },
+      { title: "Para Practicantes", href: linkxd },
+      { title: "Premium" },
+    ];
+    this.items= items2;
+    //this.testvar=linkxd
+  },
+  methods: {
+    asdf() {
+      console.log(this.ruteOfUser);
+    },
+    testMet() {},
+  },
+  computed: {
+    ruteOfUser() {
+      console.log(this.$store.getters.getId,"computada")
+      return this.$store.getters.getId;
+    },
+    refresh() {
+      
     }
-  }
-  
+  },
 };
 </script>
 
